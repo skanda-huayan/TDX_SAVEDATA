@@ -1,41 +1,13 @@
-========================================================================
-       DYNAMIC LINK LIBRARY : TestPluginTCale
-========================================================================
+#TDX Save Data for day's K line#
 
+1 編譯
+VS2015
 
-AppWizard has created this TestPluginTCale DLL for you.  
-
-This file contains a summary of what you will find in each of the files that
-make up your TestPluginTCale application.
-
-TestPluginTCale.dsp
-    This file (the project file) contains information at the project level and
-    is used to build a single project or subproject. Other users can share the
-    project (.dsp) file, but they should export the makefiles locally.
-
-TestPluginTCale.cpp
-    This is the main DLL source file.
-
-	When created, this DLL does not export any symbols. As a result, it 
-	will not produce a .lib file when it is built. If you wish this project
-	to be a project dependency of some other project, you will either need to 
-	add code to export some symbols from the DLL so that an export library 
-	will be produced, or you can check the "doesn't produce lib" checkbox in 
-	the Linker settings page for this project. 
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named TestPluginTCale.pch and a precompiled types file named StdAfx.obj.
-
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" to indicate parts of the source code you
-should add to or customize.
-
-
-/////////////////////////////////////////////////////////////////////////////
+2 綁定公式
+1）把DLL文件放在，到通達信安裝目錄的T0002/dlls之下
+2）綁定DLL函數。假設綁在3號DLL。
+3）添加公式：
+SHL:=TDXDLL3(1,Code,H,L);
+SOC:=TDXDLL3(2,Code,O,C);
+SDA:=TDXDLL3(3,Code,Date,0);
+TDXDLL3(4,0,0,0);
