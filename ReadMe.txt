@@ -11,3 +11,6 @@ SHL:=TDXDLL3(1,Code,H,L);
 SOC:=TDXDLL3(2,Code,O,C);
 SDA:=TDXDLL3(3,Code,Date,0);
 TDXDLL3(4,0,0,0);
+
+skanda
+2021.02.22
